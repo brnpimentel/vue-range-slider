@@ -27,7 +27,11 @@
     "> 1%",
     "not ie <= 8"
   ],
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build": "npx gulp"
   },
   "devDependencies": {
@@ -52,7 +56,7 @@
     "uglify-js": "^3.4.9",
     "zlib": "^1.0.5",
     "kind-of": ">=6.0.3",
-    "lodash":">=4.17.19",
+    "lodash": ">=4.17.19",
     "dot-prop": ">=4.2.1",
     "ini": ">=1.3.6"
   }

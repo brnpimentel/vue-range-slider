@@ -1,6 +1,6 @@
 /*!
  * vue-range-slider v1.0.3
- * (c) 2016-2019 xwpongithub
+ * (c) 2016-2021 xwpongithub
  * Released under the MIT License.
  */
 
@@ -86,7 +86,7 @@
   }
   function addEvent(el, type, fn, capture) {
     el.addEventListener(type, fn, {
-      passive: false,
+      passive: true,
       capture: !!capture
     });
   }
@@ -181,7 +181,7 @@
         type: [String, Boolean],
         default: 'always',
         validator: function validator(val) {
-          return ['hover', 'always'].indexOf(val) > -1;
+          return ['hover', 'always', false].indexOf(val) > -1;
         }
       },
       // 组件方向
